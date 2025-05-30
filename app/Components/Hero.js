@@ -84,7 +84,7 @@ export default function Hero() {
             className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
             style={{ animation: "fadeInUp 1s ease-out 0.6s both" }}
           >
-            Because teaching kids the difference between good and bad isn't just education it's
+            Because teaching kids the difference between good and bad isn&apos;t just education it&apos;s
             <span className="text-red-600 font-semibold">  protection, empowerment, </span>
             and preparation for life!
           </p>
@@ -149,7 +149,7 @@ export default function Hero() {
             <div className="relative z-10">
               <div className="relative overflow-hidden rounded-3xl">
                 <Image
-                  src="/placeholder.svg?height=600&width=700"
+                  src="/logo.png"
                   alt="Quiz Game Illustration"
                   width={700}
                   height={600}
