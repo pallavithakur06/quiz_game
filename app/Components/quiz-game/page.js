@@ -42,7 +42,6 @@ const baseLevels = [
   },
 ];
 
-
 export default function QuizGameLevels() {
   const [unlocked, setUnlocked] = useState(1)
 
@@ -60,7 +59,7 @@ export default function QuizGameLevels() {
     }))
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-rose-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-rose-50 via-white to-red-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-24 px-2 sm:px-4">
       <div className="text-center mb-16">
         <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent">
           Choose Your Quiz Level
@@ -77,11 +76,13 @@ export default function QuizGameLevels() {
               key={level.title}
               className={`relative group rounded-3xl p-8 shadow-xl border border-red-200/50 dark:border-red-400/30 bg-white/70 dark:bg-gray-800/70 backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl
                 bg-gradient-to-r ${level.color} ${level.disabled ? "opacity-60 cursor-not-allowed" : "hover:opacity-100"}
+                w-full min-w-0
+                max-w-xs mx-auto md:max-w-full md:mx-0
               `}
             >
               <div className="flex items-center mb-4">
-                <div className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/80 shadow-lg mr-4`}>
-                  <Icon className={`h-8 w-8 text-red-600`} />
+                <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white/80 shadow-lg mr-4">
+                  <Icon className="h-8 w-8 text-red-600" />
                 </div>
                 <h2 className="text-2xl font-bold text-gray-800 dark:text-gray-100">{level.title}</h2>
               </div>
@@ -89,14 +90,14 @@ export default function QuizGameLevels() {
               {level.disabled ? (
                 <button
                   disabled
-                  className="px-6 py-3 rounded-xl font-semibold text-white bg-gray-400 cursor-not-allowed shadow-lg"
+                  className="px-6 py-3 rounded-xl font-semibold text-white bg-gray-400 cursor-not-allowed shadow-lg w-full"
                 >
                   Locked
                 </button>
               ) : (
                 <Link href={level.href}>
                   <button
-                    className="px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-red-500 to-red-700 shadow-lg transition-all duration-300 hover:from-red-400 hover:to-red-600 hover:scale-105"
+                    className="px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r from-red-500 to-red-700 shadow-lg transition-all duration-300 hover:from-red-400 hover:to-red-600 hover:scale-105 w-full"
                   >
                     Start Level
                   </button>
