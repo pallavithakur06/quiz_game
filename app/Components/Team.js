@@ -57,7 +57,7 @@ export default function Team() {
           </h2>
 
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We're a passionate group of developers working together to create the safest and most engaging learning experience for kids.
+            We&apos;re a passionate group of developers working together to create the safest and most engaging learning experience for kids.
           </p>
         </div>
 
@@ -146,7 +146,7 @@ export default function Team() {
                 Want to Join Our Mission?
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                We're always looking for passionate educators, developers, and child advocates who share our mission of making learning fun, safe, and accessible for every child.
+                We&apos;re always looking for passionate educators, developers, and child advocates who share our mission of making learning fun, safe, and accessible for every child.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
