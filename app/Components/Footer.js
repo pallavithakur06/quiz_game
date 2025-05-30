@@ -71,7 +71,7 @@ export default function Footer() {
               </div>
               <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-md leading-relaxed">
                 Making understanding and learning safe for kids worldwide. Join thousands of families who trust
-                PAQuiz for their children's safety journey!
+                PAQuiz for their children&apos;s safety journey!
               </p>
 
               {/* Social Links */}
@@ -131,16 +131,26 @@ export default function Footer() {
                     Get updates on new features, educational tips, and child safety information delivered to your inbox.
                   </p>
                 </div>
-                <div className="flex w-full lg:w-auto">
+                {/* Newsletter Form */}
+                <form
+                  action="https://formspree.io/f/mkgbwrga" 
+                  method="POST"
+                  className="flex w-full lg:w-auto"
+                >
                   <input
                     type="email"
+                    name="email"
+                    required
                     placeholder="Enter your email address"
                     className="bg-white/80 dark:bg-gray-700/80 text-gray-800 dark:text-gray-100 px-6 py-4 rounded-l-xl border border-red-200/50 dark:border-red-400/30 focus:outline-none focus:border-red-400 dark:focus:border-red-400 focus:ring-2 focus:ring-red-400/20 flex-1 lg:w-80 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                   />
-                  <button className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 px-8 py-4 rounded-r-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white font-medium">
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 px-8 py-4 rounded-r-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white font-medium"
+                  >
                     Subscribe
                   </button>
-                </div>
+                </form>
               </div>
             </div>
           </div>
