@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# PAQuiz
 
-## Getting Started
+PAQuiz is a safe, interactive learning platform designed for kids aged 6-16, focusing on educational quizzes that promote values like kindness, safety, and social awareness. Built with [Next.js](https://nextjs.org), it features a fun, modern UI, dark mode, and progressive quiz levels.
 
-First, run the development server:
+---
+
+## 🚀 Getting Started
+
+First, install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
 # or
-yarn dev
+yarn install && yarn dev
 # or
-pnpm dev
-# or
-bun dev
+pnpm install && pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the app.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧩 Features
 
-## Learn More
+- **Kid-Friendly Quizzes:** Levels on safety, values, and awareness.
+- **Progressive Unlocking:** Complete a level to unlock the next.
+- **Dark Mode:** Persistent and instant, with smooth transitions.
+- **Responsive Design:** Works great on desktop and mobile.
+- **Contact & Newsletter Forms:** Secure, Formspree-powered messaging.
+- **Team & About Pages:** Meet the creators and learn about the mission.
+- **Accessible UI:** Keyboard and screen-reader friendly.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🗂️ Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+quiz_game/
+├── app/
+│   ├── Components/
+│   │   ├── About.js
+│   │   ├── Contact.js
+│   │   ├── Faq.js
+│   │   ├── Footer.js
+│   │   ├── Hero.js
+│   │   ├── Navbar.js
+│   │   ├── Team.js
+│   │   ├── Theme-toggle.js
+│   │   └── quiz-game/
+│   │       ├── page.js         # Quiz level selection
+│   │       ├── level1/
+│   │       │   └── page.js
+│   │       ├── level2/
+│   │       │   └── page.js
+│   │       ├── level3/
+│   │       │   └── page.js
+│   │       ├── level4/
+│   │       │   └── page.js
+│   │       └── level5/
+│   │           └── page.js
+│   ├── globals.css
+│   ├── layout.js
+│   └── page.js                 # Home page
+├── public/
+│   └── (images, favicon, etc.)
+├── README.md
+├── package.json
+└── ... (other config files)
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✉️ Contact & Newsletter
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Contact Form:** Messages are sent securely to `aniketsahaworkspace@gmail.com` via Formspree.
+- **Newsletter Signup:** Parents can subscribe for updates using the footer form.
+
+---
+
+## 🌙 Dark Mode
+
+Dark mode is persistent and instant, using a combination of localStorage and a hydration-safe script in `app/layout.js`.
+
+---
+
+## 🛡️ Safety & Privacy
+
+- COPPA compliant and child-safe.
+- No personal data is stored.
+- All communication is secure.
+
+---
+
+## 👨‍💻 Contributing
+
+Pull requests and suggestions are welcome! Please open an issue first to discuss changes.
+
+---
+
+## 📚 Learn More
+
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
+- [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
+
+---
+
+## 📝 License
+
+MIT
+
+---
+
+Made with ❤️ by the PAQuiz Team.
