@@ -13,6 +13,9 @@ export default function Contact() {
     message: "",
   })
 
+  // Formspree endpoint for aniketsahaworkspace@gmail.com (replace with your own if needed)
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mkgbwrga"
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -20,18 +23,20 @@ export default function Contact() {
     })
   }
 
+  // No need for handleSubmit if using Formspree, but you can use it for custom validation or feedback
+  // Here, we'll just reset the form after submission
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log("Form submitted:", formData)
-    setFormData({ name: "", email: "", message: "" })
-    alert("Thank you for your message! We'll get back to you soon.")
+    // Let the browser handle the POST to Formspree
+    setTimeout(() => {
+      setFormData({ name: "", email: "", message: "" })
+    }, 1000)
   }
 
   const contactInfo = [
     {
       icon: Mail,
       title: "Email",
-      value: "support@quizmaster.com",
+      value: "aniketsahaworkspace@gmail.com",
       description: "Send us an email anytime",
     },
     {
@@ -69,12 +74,12 @@ export default function Contact() {
 
           <h2 className="text-4xl md:text-6xl font-bold mb-8">
             <span className="bg-gradient-to-r from-gray-800 dark:from-gray-100 to-gray-600 dark:to-gray-300 bg-clip-text text-transparent">
-              Let's
+              Let&apos;s
             </span>
             <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> Connect</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Have questions about PAQuiz? Want to share feedback? We'd love to hear from parents and kids! Our team
+            Have questions about PAQuiz? Want to share feedback? We&apos;d love to hear from parents and kids! Our team
             is here to help make learning fun and safe.
           </p>
         </div>
@@ -118,7 +123,7 @@ export default function Contact() {
               <Shield className="h-8 w-8 text-red-600 dark:text-red-400 mb-4" />
               <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-4">Safe & Secure Support</h4>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Our support team is trained in child safety and privacy. We're committed to providing a secure
+                Our support team is trained in child safety and privacy. We&apos;re committed to providing a secure
                 environment for kids to learn and grow while giving parents peace of mind.
               </p>
               <div className="flex flex-wrap gap-3">
@@ -140,7 +145,12 @@ export default function Contact() {
             style={{ animation: "fadeInUp 0.6s ease-out 0.3s both" }}
           >
             <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-100 mb-8">Send us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form
+              action={FORMSPREE_ENDPOINT}
+              method="POST"
+              className="space-y-6"
+              onSubmit={handleSubmit}
+            >
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-200 mb-3">
                   Full Name *
