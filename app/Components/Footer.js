@@ -121,7 +121,7 @@ export default function Footer() {
           {/* Newsletter Signup */}
           <div className="border-t border-red-200/50 mt-16 pt-12">
             <div className="bg-gradient-to-r from-red-100/80 via-white/80 to-red-100/80 dark:from-gray-800/80 dark:via-gray-700/80 dark:to-gray-800/80 rounded-3xl p-8 backdrop-blur-xl border border-red-200/50 dark:border-red-400/30 shadow-lg">
-              <div className="flex flex-col lg:flex-row justify-between items-center">
+              <div className="flex flex-col w-full gap-2 sm:flex-row lg:flex-row justify-between items-center">
                 <div className="mb-6 lg:mb-0 text-center lg:text-left">
                   <h4 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2 flex items-center justify-center lg:justify-start">
                     <Mail className="h-6 w-6 mr-2 text-red-600 dark:text-red-400" />
@@ -133,20 +133,20 @@ export default function Footer() {
                 </div>
                 {/* Newsletter Form */}
                 <form
-                  action="https://formspree.io/f/mkgbwrga" 
+                  action="https://formspree.io/f/mkgbwrga"
                   method="POST"
-                  className="flex w-full lg:w-auto"
+                  className="flex flex-col w-full gap-2 sm:flex-row lg:w-auto"
                 >
                   <input
                     type="email"
                     name="email"
                     required
                     placeholder="Enter your email address"
-                    className="bg-white/80 dark:bg-gray-700/80 text-gray-800 dark:text-gray-100 px-6 py-4 rounded-l-xl border border-red-200/50 dark:border-red-400/30 focus:outline-none focus:border-red-400 dark:focus:border-red-400 focus:ring-2 focus:ring-red-400/20 flex-1 lg:w-80 placeholder:text-gray-500 dark:placeholder:text-gray-400"
+                    className="bg-white/80 dark:bg-gray-700/80 text-gray-800 dark:text-gray-100 px-6 py-4 rounded-xl sm:rounded-l-xl sm:rounded-r-none border border-red-200/50 dark:border-red-400/30 focus:outline-none focus:border-red-400 dark:focus:border-red-400 focus:ring-2 focus:ring-red-400/20 flex-1 lg:w-80 placeholder:text-gray-500 dark:placeholder:text-gray-400"
                   />
                   <button
                     type="submit"
-                    className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 px-8 py-4 rounded-r-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white font-medium"
+                    className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-400 hover:to-red-600 px-8 py-4 rounded-xl sm:rounded-l-none sm:rounded-r-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-red-500/25 text-white font-medium w-full sm:w-auto"
                   >
                     Subscribe
                   </button>
