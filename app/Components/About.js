@@ -60,7 +60,7 @@ export default function About() {
             <span className="bg-gradient-to-r from-red-600 to-red-800 bg-clip-text text-transparent"> PAQuiz?</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
-           PaQuiz is designed to help children learn about the values that matter—kindness, honesty, safety, and awareness—through fun and interactive quizzes. Whether it's understanding right from wrong or learning how to make better choices, our platform turns important life lessons into an exciting and enjoyable journey!
+           PaQuiz is designed to help children learn about the values that matter—kindness, honesty, safety, and awareness—through fun and interactive quizzes. Whether it&apos;s understanding right from wrong or learning how to make better choices, our platform turns important life lessons into an exciting and enjoyable journey!
           </p>
         </div>
 
