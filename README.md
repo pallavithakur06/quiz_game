@@ -108,7 +108,7 @@ Pull requests and suggestions are welcome! Please open an issue first to discuss
 
 ## 📝 License
 
-MIT
+Apache 2.0
 
 ---
 
